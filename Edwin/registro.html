@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resgistrarse en ANYM</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background: url(FONDO11.jpg);
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            width: 400px;
+            max-width: 100%;
+        }
+
+        .tab {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+        }
+
+        .tab button {
+            padding: 10px;
+            width: 50%;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        .form-content {
+            padding: 20px;
+        }
+
+        input[type="text"],
+        input[type="password"],
+        input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'login')" id="defaultOpen">Iniciar Sesión</button>
+        <button class="tablinks" onclick="openTab(event, 'registro')">Registrarse</button>
+    </div>
+
+    <div class="form-content">
+        <!-- Formulario de Inicio de Sesión -->
+        <div id="login" class="tabcontent">
+            <label for="login_email">Correo Electrónico:</label>
+            <input type="email" id="login_email" name="login_email" required>
+
+            <label for="login_password">Contraseña:</label>
+            <input type="password" id="login_password" name="login_password" required>
+            <a href="http://127.0.0.1:5500/menu.html#contacto">
+            <button type="submit">Iniciar Sesión</button>
+            </a>
+
+        </div>
+
+        <!-- Formulario de Registro -->
+        <div id="registro" class="tabcontent">
+            <label for="register_name">Nombre:</label>
+            <input type="text" id="register_name" name="register_name" required>
+
+            <label for="register_email">Correo Electrónico:</label>
+            <input type="email" id="register_email" name="register_email" required>
+
+            <label for="register_password">Contraseña:</label>
+            <input type="password" id="register_password" name="register_password" required>
+
+            <button type="submit">Registrarse</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Cargar el primer formulario por defecto al abrir la página
+    document.getElementById("defaultOpen").click();
+</script>
+
+</body>
+</html>
+<a href="http://127.0.0.1:5500/menu.html"></a>
+
+
+
+
+

@@ -1,0 +1,19 @@
+body {
+    background-color: #322932; /* Fondo morado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background: url(inicio.jpg);
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 18px;
+    background-color: #191a19; /* Color verde */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
